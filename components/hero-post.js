@@ -29,13 +29,17 @@ export default function HeroPost({
           name={author.name}
           size='largest'
         />
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <Text content={title} weight="bold" />
+        </Link>
         <DateFormatter dateString={date} />
         <Text content={author.name} size="small" />
       </Flex>
     </Card.Header>
     <Card.Body>
+    <Link as={`/posts/${slug}`} href="/posts/[slug]">
       {excerpt}
+      </Link>
       <Text content="Read More" />
     </Card.Body>
   </Card>
