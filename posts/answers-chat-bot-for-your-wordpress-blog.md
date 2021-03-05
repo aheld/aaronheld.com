@@ -1,7 +1,6 @@
 ---
 title: "Answers Chat bot for your WordPress blog"
 date: "2017-04-15"
-excerpt: "This is amazing"
 
 ---
 
