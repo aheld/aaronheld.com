@@ -1,4 +1,4 @@
-import Container from '../components/container'
+// import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
@@ -6,6 +6,13 @@ import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
@@ -15,8 +22,11 @@ export default function Index({ allPosts }) {
       <Layout>
         <Head>
           <title>{CMS_NAME}</title>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         </Head>
-        <Container maxWidth="sm">
+        <CssBaseline />
+        <Container maxWidth="md">
+          
           <Intro />
           {heroPost && (
             <HeroPost

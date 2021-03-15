@@ -1,19 +1,15 @@
 import PostPreview from '../components/post-preview'
-import { Header, Box } from '@fluentui/react-northstar'
+import { AppBar, Toolbar, IconButton, Typography, Box, Button } from '@material-ui/core'
 
 export default function MoreStories({ posts }) {
   return (
     <section>
-       <Header
-        as="h2"
-        content="More Stories"
-  
-        description={{
-          content: 'Work and Life both have deadlines',
-          as: 'span',
-        }}
-        />
-        <Box>
+<Typography component="h2" variant="h2">
+  More Stories
+</Typography>
+
+        <Box display="flex"
+        flexWrap="wrap">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -26,6 +22,6 @@ export default function MoreStories({ posts }) {
           />
         ))}
       </Box>
-    </section>
+      </section>
   )
 }

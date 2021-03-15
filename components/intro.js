@@ -1,5 +1,5 @@
 import { CMS_NAME } from '../lib/constants'
-import { Header } from '@fluentui/react-northstar'
+import Header from '../components/header'
 
 export default function Intro() {
   return (
