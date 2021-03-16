@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
   root: {
-    flexGrow: 1,
-    margin: 50
+    // flexGrow: 1,
+    margin: 25
   },
   toolbarTitle: {
     flex: 1,
@@ -38,10 +38,9 @@ export default function Layout({ preview, children }) {
       <Box className={classes.root}>
         <BlogAlert preview={preview} />
 
-        <Toolbar className={classes.root}>
+        <Toolbar>
         <Button size="small" ><Link href="/">Home</Link></Button>
         <Typography
-          style={{width:"100%"}}
           component="h2"
           variant="h5"
           color="inherit"

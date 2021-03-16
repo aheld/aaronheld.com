@@ -56,7 +56,7 @@ export default function HeroPost({
       <Grid container>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography component="h1" variant="h4" color="inherit" gutterBottom>
               {title}
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>

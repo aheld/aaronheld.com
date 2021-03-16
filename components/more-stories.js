@@ -1,5 +1,5 @@
 import PostPreview from '../components/post-preview'
-import { AppBar, Toolbar, IconButton, Typography, Box, Button } from '@material-ui/core'
+import { AppBar, Toolbar, IconButton, Typography, Grid, Button } from '@material-ui/core'
 
 export default function MoreStories({ posts }) {
   return (
@@ -8,9 +8,10 @@ export default function MoreStories({ posts }) {
   More Stories
 </Typography>
 
-        <Box display="flex"
-        flexWrap="wrap">
+         <Grid container spacing={3}>
         {posts.map((post) => (
+          <Grid item md={4} sm={12} key={post.slug}>
+
           <PostPreview
             key={post.slug}
             title={post.title}
@@ -20,8 +21,9 @@ export default function MoreStories({ posts }) {
             slug={post.slug}
             excerpt={post.excerpt}
           />
+          </Grid>
         ))}
-      </Box>
+      </Grid>
       </section>
   )
 }
